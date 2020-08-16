@@ -1,0 +1,5 @@
+group 'prv.saevel'
+
+version '1.0'
+
+task build(dependsOn: [':api:build', ":api-first-client:build", ":api-first-server:build", ":code-first-server:build"])

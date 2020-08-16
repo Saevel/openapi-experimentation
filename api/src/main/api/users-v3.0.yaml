@@ -1,0 +1,50 @@
+openapi: 3.0.0
+
+info:
+  title: User API, Sample for Contract-Driven Development
+  description: User API description
+  version: "1.0"
+
+paths:
+  /users/{id}:
+    parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+        example: 12
+    get:
+      responses:
+        '200':
+          description: Responds with a user, if a user with a given id is found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+
+        '404':
+            description: Empty response, if the user with a given id is not found
+            content:
+              text/plain:
+                schema:
+                  type: string
+                  example: User not found
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+          example: 12
+        name:
+          type: string
+          example: Kamil
+        surname:
+          type: string
+          example: Owczarek
+        age:
+          type: integer
+          example: 12

@@ -1,0 +1,6 @@
+rootProject.name = 'swagger-codegen-experiments'
+include 'api-first-server'
+include 'api'
+include 'api-first-client'
+include 'code-first-server'
+

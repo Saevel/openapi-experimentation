@@ -1,0 +1,7 @@
+# Project exclude paths
+/.gradle/
+/api-first-client/build/
+/api-first-server/build/
+/api-first-server/build/classes/java/main/
+/code-first-server/build/
+/code-first-server/build/classes/java/main/
